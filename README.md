@@ -2,7 +2,7 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository.
-git clone <YOUR_GIT_URL>
+git clone `https://github.com/Abigail-Addo/PLP-E-Learning-Platform.git`
 
 # Step 3: Install the necessary dependencies.
 npm i
