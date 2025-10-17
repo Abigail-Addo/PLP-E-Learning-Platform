@@ -102,6 +102,10 @@ const Index = () => {
           ))}
         </div>
       </main>
+
+      <div className="flex justify-center py-6">
+        <a href="https://github.com/Abigail-Addo/PLP-E-Learning-Platform.git" className="underline text-primary" target="_blank">View code on github</a>
+      </div>
     </div>
   );
 };

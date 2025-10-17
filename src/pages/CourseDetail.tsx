@@ -37,13 +37,13 @@ export default function CourseDetail() {
 
   useEffect(() => {
     if (!id || !session) return;
-    
+
     loadCourseProgress();
   }, [id, session]);
 
   const loadCourseProgress = async () => {
     if (!id || !session) return;
-    
+
     setLoading(true);
     const baseCourse = courses.find((c) => c.id === id);
     if (!baseCourse) {
@@ -153,7 +153,7 @@ export default function CourseDetail() {
         lessons: course.lessons.map((lesson) => ({ ...lesson, completed: true })),
       };
       setCourse(updatedCourse);
-      
+
       toast.success("Congratulations! Course completed! 🎊");
     } catch (error) {
       console.error("Error completing course:", error);
@@ -200,14 +200,14 @@ export default function CourseDetail() {
               Back to Courses
             </Button>
           </Link>
-          
+
           <div className="flex flex-col lg:flex-row gap-6 items-start">
             <img
               src={course.thumbnail}
               alt={course.title}
               className="w-full lg:w-80 h-48 object-cover rounded-lg shadow-md"
             />
-            
+
             <div className="flex-1">
               <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">
                 {course.title}
@@ -215,7 +215,7 @@ export default function CourseDetail() {
               <p className="text-muted-foreground mb-4 text-lg">
                 {course.description}
               </p>
-              
+
               <div className="flex flex-wrap gap-4 text-muted-foreground mb-6">
                 <div className="flex items-center gap-2">
                   <BookOpen className="h-5 w-5" />
@@ -229,7 +229,7 @@ export default function CourseDetail() {
                   <span className="font-medium">Instructor:</span> {course.instructor}
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-foreground">
@@ -279,7 +279,7 @@ export default function CourseDetail() {
                       <Circle className="h-6 w-6 text-muted-foreground" />
                     )}
                   </div>
-                  
+
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
@@ -287,11 +287,10 @@ export default function CourseDetail() {
                           Lesson {index + 1}
                         </p>
                         <h3
-                          className={`font-medium text-lg ${
-                            lesson.completed
-                              ? "text-muted-foreground line-through"
-                              : "text-foreground"
-                          }`}
+                          className={`font-medium text-lg ${lesson.completed
+                            ? "text-muted-foreground line-through"
+                            : "text-foreground"
+                            }`}
                         >
                           {lesson.title}
                         </h3>
@@ -308,6 +307,11 @@ export default function CourseDetail() {
           </div>
         </div>
       </main>
+
+      <div className="flex justify-center py-6">
+        <a href="https://github.com/Abigail-Addo/PLP-E-Learning-Platform.git" className="underline text-primary" target="_blank">View code on github</a>
+      </div>
+
     </div>
   );
 }

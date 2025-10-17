@@ -103,7 +103,7 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background flex flex-col gap-8 items-center justify-center p-4">
       <Card className="w-full max-w-md p-8">
         <div className="flex flex-col items-center mb-8">
           <BookOpen className="h-12 w-12 text-primary mb-4" />
@@ -176,6 +176,10 @@ export default function Auth() {
           </button>
         </div>
       </Card>
+
+      <div>
+        <a href="https://github.com/Abigail-Addo/PLP-E-Learning-Platform.git" className="underline text-primary" target="_blank">View code on github</a>
+      </div>
     </div>
   );
 }
